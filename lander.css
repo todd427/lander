@@ -1,0 +1,99 @@
+body {
+    background: #181c20;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+h1 {
+    margin-top: 40px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+table {
+    border-collapse: collapse;
+    margin: 30px 0 10px 0;
+    min-width: 350px;
+    background: #23272b;
+    box-shadow: 0 2px 8px #0008;
+}
+th, td {
+    border: 1px solid #444;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 1.2em;
+}
+th {
+    background: #2d3238;
+    color: #ffecb3;
+    font-weight: bold;
+}
+td {
+    color: #e0e0e0;
+}
+label {
+    font-size: 1.1em;
+    margin-right: 8px;
+}
+#burn-input {
+    width: 80px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #23272b;
+    color: #f0f0f0;
+    font-size: 1em;
+    margin-right: 10px;
+}
+#burn-btn {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#burn-btn:hover {
+    background: #388e3c;
+}
+#status-msg {
+    margin-top: 24px;
+    font-size: 1.2em;
+    min-height: 1.5em;
+    padding: 10px 20px;
+    border-radius: 6px;
+    /* background: #23272b; */
+    color: #ffecb3;
+    box-shadow: 0 1px 4px #0006;
+    max-width: 400px;
+    text-align: center;
+}
+.status-win {
+    background: #2e7d32 !important;
+    color: #fff !important;
+}
+.status-lose {
+    background: #b71c1c !important;
+    color: #fff !important;
+}
+.status-over {
+    background: #1565c0 !important;
+    color: #fff !important;
+}
+table, th, td, label, #burn-input, #burn-btn, #status-msg, h1 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+@keyframes flash-green {
+    0%   { background-color: #4caf50; }
+    80%  { background-color: #4caf50; }
+    100% { background-color: inherit; }
+}
+.flash-green {
+    animation: flash-green 0.4s ease;
+} 
