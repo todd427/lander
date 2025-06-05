@@ -1,10 +1,14 @@
-# Use a minimal Nginx image
+# Use a minimal nginx image
 FROM nginx:alpine
 
-# Copy your HTML and assets into the Nginx web root
+# Remove default Nginx landing page
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy your site into the Nginx web root
 COPY . /usr/share/nginx/html
 
-# Expose the default HTTP port
+# Expose HTTP port
 EXPOSE 80
 
-# Nginx runs automatically as the default command
+# Start Nginx in foreground (important for Docker)
+CMD ["nginx", "-g", "daemon off;"]
